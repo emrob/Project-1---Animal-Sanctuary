@@ -20,7 +20,7 @@ animal2 = Animal.new({
   "type" => "Dog",
   "age" => 9,
   "days_in_care" => 14,
-  "adoption_status" => "Looking for a new home"
+  "adoption_status" => "Ready for a new home"
   })
 animal2.save()
 
@@ -29,7 +29,7 @@ animal3 = Animal.new({
   "type" => "Rabbit",
   "age" => 2,
   "days_in_care" => 3,
-  "adoption_status" => "Looking for a new home"
+  "adoption_status" => "Ready for a new home"
   })
 animal3.save()
 
