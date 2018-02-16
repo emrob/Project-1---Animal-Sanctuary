@@ -1,7 +1,10 @@
 require("pry")
 require_relative('../models/animals.rb')
+require_relative('../models/owners.rb')
 
 Animal.delete_all()
+Owner.delete_all()
+
 
 animal1 = Animal.new({
   "name" => "Herbie",
@@ -35,16 +38,17 @@ animal4 = Animal.new({
   })
 animal4.save()
 
-        # owner1 = Owner.new({
-        #   "name" => "Rosemary",
-        #   "age" => 50
-        #   })
+owner1 = Owner.new({
+  "name" => "Rosemary",
+  "age" => 50
+  })
+owner1.save()
 
-        #   owner2 = Owner.new({
-        #     "name" => "Mark",
-        #     "age" => 23
-        #     })
-
+owner2 = Owner.new({
+  "name" => "Mark",
+  "age" => 23
+  })
+owner2.save()
 
 binding.pry
 nil
