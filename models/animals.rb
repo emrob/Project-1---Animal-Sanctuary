@@ -4,7 +4,7 @@ class Animal
 
   attr_accessor :name, :type, :age, :days_in_care, :adoption_status, :id
 
-  def initialize( options )
+  def initialize( options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @type = options['type']
@@ -17,10 +17,11 @@ class Animal
 
 
   def save()
-    sql = "INSERT INTO animals ( name, type, age, days_in_care, adoption_status) VALUES ($1, $2, $3, $4, $5) RETURNING id"
+    sql = "INSERT INTO animals (name, type, age, days_in_care, adoption_status) VALUES ($1, $2, $3, $4, $5) RETURNING *"
     values = [@name, @type, @age, @days_in_care, @adoption_status]
     animal = SqlRunner.run(sql, values)
     @id = animal.first()['id'].to_i
+  
 
   end
 
