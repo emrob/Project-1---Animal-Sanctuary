@@ -1,5 +1,15 @@
+DROP TABLE adoptions;
 DROP TABLE animals;
 DROP TABLE owners;
+
+
+
+CREATE TABLE owners (
+  id serial4 PRIMARY KEY,
+  name VARCHAR(255),
+  age INT
+
+);
 
 CREATE TABLE animals (
   id serial4 PRIMARY KEY,
@@ -11,9 +21,8 @@ CREATE TABLE animals (
 
 );
 
-CREATE TABLE owners (
+CREATE TABLE adoptions (
   id serial4 PRIMARY KEY,
-  name VARCHAR(255),
-  age INT
-
+  owner_id INT8 REFERENCES owners(id),
+  animal_id INT8 REFERENCES animals(id)
 );
