@@ -21,7 +21,7 @@ class Animal
     values = [@name, @type, @age, @days_in_care, @adoption_status]
     animal = SqlRunner.run(sql, values)
     @id = animal.first()['id'].to_i
-  
+    
 
   end
 

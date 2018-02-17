@@ -9,6 +9,9 @@ class Owner
     @name = options['name']
     @age = options['age'].to_i
 
+
+
+
   end
 
 

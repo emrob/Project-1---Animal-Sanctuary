@@ -49,7 +49,7 @@ animal5 = Animal.new({
   "days_in_care" => 1,
   "adoption_status" => "Being trained"
   })
-animal5.save()  
+animal5.save()
 
 owner1 = Owner.new({
   "name" => "Rosemary",
@@ -60,6 +60,7 @@ owner1.save()
 owner2 = Owner.new({
   "name" => "Mark",
   "age" => 23
+
   })
 owner2.save()
 

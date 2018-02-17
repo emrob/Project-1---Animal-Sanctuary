@@ -15,4 +15,5 @@ CREATE TABLE owners (
   id serial4 PRIMARY KEY,
   name VARCHAR(255),
   age INT
+
 );
