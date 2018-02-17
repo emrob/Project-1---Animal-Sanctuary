@@ -5,7 +5,7 @@ class Owner
   attr_accessor :name, :age, :id
 
   def initialize( options)
-    @id = options['id'].to_i
+    @id = options['id'].to_i if options['id']
     @name = options['name']
     @age = options['age'].to_i
 
