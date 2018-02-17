@@ -2,17 +2,8 @@ DROP TABLE adoptions;
 DROP TABLE animals;
 DROP TABLE owners;
 
-
-
-CREATE TABLE owners (
-  id serial4 PRIMARY KEY,
-  name VARCHAR(255),
-  age INT
-
-);
-
 CREATE TABLE animals (
-  id serial4 PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   type VARCHAR(255),
   age INT,
@@ -21,8 +12,17 @@ CREATE TABLE animals (
 
 );
 
+CREATE TABLE owners (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255),
+  age INT
+
+);
+
+
+
 CREATE TABLE adoptions (
-  id serial4 PRIMARY KEY,
-  owner_id INT8 REFERENCES owners(id),
-  animal_id INT8 REFERENCES animals(id)
+  id SERIAL PRIMARY KEY,
+  owner_id INT REFERENCES owners(id) ON DELETE CASCADE,
+  animal_id INT REFERENCES animals(id) ON DELETE CASCADE
 );
