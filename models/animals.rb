@@ -17,11 +17,10 @@ class Animal
 
 
   def save()
-    sql = "INSERT INTO animals ( name, type, age, days_in_care, adoption_status) VALUES ($1, $2, $3, $4, $5) RETURNING *"
+    sql = "INSERT INTO animals ( name, type, age, days_in_care, adoption_status) VALUES ($1, $2, $3, $4, $5) RETURNING id"
     values = [@name, @type, @age, @days_in_care, @adoption_status]
     animal = SqlRunner.run(sql, values)
     @id = animal.first()['id'].to_i
-
 
   end
 

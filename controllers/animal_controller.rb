@@ -14,15 +14,13 @@ get '/animals/:id' do
 end
 
 
+post '/animals' do
+  @animals = Animal.new(params)
+  @animals.save()
+  erb(:"animals/create")
+end
 
-#
-# get '/animals/new' do
-#   erb(:new)
-# end
-#
-#
-# post '/animals' do
-#   @animals = Animal.new(params)
-#   @animals.save()
-#   erb(:create)
-# end
+
+get '/animals/add' do
+  erb(:"animals/new")
+end

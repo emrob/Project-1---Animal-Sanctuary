@@ -1,4 +1,6 @@
-<p>All Animals:</p>
+<h1>All Animals:</h1>
+
+
 
 <% @animal.each do |animal| %>
 
@@ -6,6 +8,9 @@
 
 
 
-<p><a href="/animals/<%= animal.id %>">View animal details</a></p>
+<p><a href="/animals/<%= animal.id %>">Click here for more details</a></p>
 
 <% end %>
+
+
+<p><a href="/animals/add">Add new animal</a></p>
