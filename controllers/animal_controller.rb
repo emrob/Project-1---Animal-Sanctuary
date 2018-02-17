@@ -5,5 +5,5 @@ require_relative( '../models/animals')
 
 get '/animals' do
   @animal = Animal.all()
-  erb(:index)
+  erb(:"animals/index")
 end
