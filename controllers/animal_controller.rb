@@ -26,6 +26,12 @@ get '/animals/:id' do
   erb(:"animals/show")
 end
 
+post "/animals/:id/delete" do
+  @animal = Animal.find(params['id'].to_i)
+  @animal.delete()
+  erb(:"animals/delete")
+  redirect to ("/animals")
+end
 
 get '/animals/:id/edit' do
   @animal = Animal.find(params['id'].to_i)
