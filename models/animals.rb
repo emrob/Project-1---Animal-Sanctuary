@@ -28,10 +28,14 @@ class Animal
     SqlRunner.run(sql,values)
   end
 
+
+
   def self.delete_all()
     sql= "DELETE FROM animals"
     SqlRunner.run(sql)
   end
+
+
 
   def self.all()
     sql = "SELECT * FROM animals"
@@ -45,8 +49,9 @@ class Animal
     values = [id]
     animals = SqlRunner.run( sql, values)
     result = Animal.new(animals.first())
-    return
+    return result
   end
+
 
 
   def owner()

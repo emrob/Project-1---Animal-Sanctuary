@@ -1,1 +1,16 @@
-<h1>Successful Matches</h1>
+<h1>Successful Adoptions:</h1>
+
+
+
+<ul>
+<% for adoption in @adoption %>
+<li>
+<p><%= adoption.owner.name %>
+<%= adoption.animal.name %>
+
+</p>
+
+</li>
+
+<% end %> 
+</ul>

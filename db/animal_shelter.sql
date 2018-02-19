@@ -2,15 +2,6 @@ DROP TABLE adoptions;
 DROP TABLE animals;
 DROP TABLE owners;
 
-
-
-CREATE TABLE owners (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(255),
-  age INT
-
-);
-
 CREATE TABLE animals (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
@@ -20,6 +11,14 @@ CREATE TABLE animals (
   adoption_status VARCHAR(255)
 
 );
+
+CREATE TABLE owners (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255),
+  age INT
+
+);
+
 
 
 CREATE TABLE adoptions (
