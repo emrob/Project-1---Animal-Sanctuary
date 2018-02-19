@@ -9,9 +9,6 @@ class Owner
     @name = options['name']
     @age = options['age'].to_i
 
-
-
-
   end
 
 
@@ -51,6 +48,13 @@ def self.find(id)
   result = Owner.new(owners.first())
   return result
 
+end
+
+def animal()
+  sql = "SELECT * FROM animals INNER JOIN adoptions ON animals.id = adoptions.animal_id WHERE owner_id = $1"
+  values = [@id]
+  adoption = SqlRunner.run(sql, values)
+  return adoption.map {|adopt| Animal.new(adopt)}
 end
 
 
