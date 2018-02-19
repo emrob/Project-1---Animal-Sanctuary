@@ -4,8 +4,7 @@
 <ul>
 <% for adoption in @adopt %>
 <li>
-<p><%= adoption.animal.name %></p>
-<p><% adoption.owner.name %></p>
+<p><%= adoption.animal.name%> & <%= adoption.owner.name %></p>
 
 </li>
 <% end %>
