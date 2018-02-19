@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <!-- <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
   <title>Animal Sanctuary</title>
-<link rel="stylesheet" href="/styles/webpage_layout.css">
+
+  <link rel="stylesheet" href="/styles/styles.css">
 </head>
-<body>
+<body
+  background="images/dog.jpg">
   <nav>
     <ul>
 
       <li><a href="/animals">View all animals</a></li>
 
+      <li><a href="/owners">Register a new Owner</a></li>
 
+      <li><a href="/adoption">View successful matches here</a></li>
 
-
-
-
-<li><a href="/owners">Register as an Owner</a></li>
-
-<li><a href="/adoption">View our success stories here</a></li>
-
-  </ul>
-</nav>
- <%= yield %>
+    </ul>
+  </nav>
+  <%= yield %>
 </body>
 </html>

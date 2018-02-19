@@ -1,0 +1,16 @@
+main {
+  background: url('/images/dog.jpg');
+
+}
+
+h1 {
+  font-family: 'Kavivanar', cursive;
+
+  justify-content: center;
+}
+p {
+  color: #424874;
+  justify-content: center;
+  box-sizing: content-box;
+
+}

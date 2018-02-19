@@ -26,7 +26,19 @@ def self.all()
 
 end
 
+def animal()
+  sql = "SELECT * FROM animals WHERE id = $1"
+  values = [@animal_id]
+  results = SqlRunner.run( sql, values)
+  return Animal.new( results.first )
+end
 
+def owner()
+  sql = "SELECT * FROM owners WHERE id = $1"
+  values = [@owner_id]
+  results = SqlRunner.run( sql, values)
+  return Owner.new( results.first )
+end
 
 
 end
