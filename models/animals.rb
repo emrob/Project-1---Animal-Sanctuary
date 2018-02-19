@@ -22,6 +22,26 @@ class Animal
     @id = animal.first()['id'].to_i
   end
 
+  def delete()
+    sql = "DELETE FROM animals WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql,values)
+  end
+
+  def self.delete_all()
+    sql= "DELETE FROM animals"
+    SqlRunner.run(sql)
+  end
+
+  def self.all()
+    sql = "SELECT * FROM animals"
+    animals = SqlRunner.run(sql)
+    result = animals.map { |animal| Animal.new(animal )}
+    return result
+  end
+
+
+
   def owner()
     sql = "SELECT * FROM owners INNER JOIN adoptions ON owners.id = adoptions.owner_id WHERE animal_id = $1"
     values = [@id]
@@ -34,12 +54,6 @@ class Animal
 
 
 
-  def self.all()
-    sql = "SELECT * FROM animals"
-    animals = SqlRunner.run(sql)
-    result = animals.map { |animal| Animal.new(animal )}
-    return
-  end
 
   def self.find(id)
     sql = "SELECT * FROM animals WHERE id = $1"
@@ -50,16 +64,8 @@ class Animal
   end
 
 
-  def self.delete_all()
-    sql= "DELETE FROM animals"
-    SqlRunner.run(sql)
-  end
 
-  def delete()
-    sql = "DELETE FROM animals WHERE id = $1"
-    values = [@id]
-    SqlRunner.run(sql,values)
-  end
+
 
 
 end
