@@ -12,7 +12,7 @@ animal1 = Animal.new({
   "name" => "Herbie",
   "type" => "Dog",
   "age" => 5,
-  "days_in_care" => 7,
+  "arrival_date" => 2018-02-01,
   "adoption_status" => "ADOPTED"
   })
 animal1.save()
@@ -70,7 +70,7 @@ owner3 = Owner.new({
   "name" => "Will",
   "age" => 30
   })
-owner3.save()  
+owner3.save()
 
 adoption1 = Adoption.new({
   "animal_id" => animal1.id,
