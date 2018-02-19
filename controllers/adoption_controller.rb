@@ -7,6 +7,6 @@ require_relative( '../models/animals')
 
 
 get '/adoption' do
-  @adoption = Adoption.all()
+  @adopt = Adoption.all()
   erb(:"adoptions/index")
 end

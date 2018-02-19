@@ -1,16 +1,12 @@
 <h1>Successful Adoptions:</h1>
 
 
-
 <ul>
-<% for adoption in @adoption %>
+<% for adoption in @adopt %>
 <li>
-<p><%= adoption.owner.name %>
-<%= adoption.animal.name %>
-
-</p>
+<p><%= adoption.animal.name %></p>
+<p><% adoption.owner.name %></p>
 
 </li>
-
-<% end %> 
+<% end %>
 </ul>
