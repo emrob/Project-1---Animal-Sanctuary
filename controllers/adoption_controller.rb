@@ -10,3 +10,16 @@ get '/adoption' do
   @adopt = Adoption.all()
   erb(:"adoptions/index")
 end
+
+
+post '/adoption' do
+  @adopt = Adoption.new()
+  @adopt.save()
+  erb(:"adoptions/create")
+end
+
+get '/adoption/new' do
+  @animals = Animal.all
+  @owners = Owner.all
+  erb(:"adoptions/new")
+end
