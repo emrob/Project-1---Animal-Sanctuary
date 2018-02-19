@@ -1,4 +1,5 @@
 <form action="/animals/<%= @animal.id %>" method="post">
+
   <label for="name">Name:</label>
   <input type="text" name="name" id="name" value="<%= @animal.name %>"/>
 
@@ -12,7 +13,19 @@
   <input type="number" name="days_in_care" id="days_in_care" value="<%= @animal.days_in_care %>"/>
 
   <label for="adoption_status">Adoption Status:</label>
-  <input type="text" name="adoption_status" id="adoption_status" value="<%= @animal.adoption_status %>"/>
+  <select name="adoption_status" id="adoption_status">
+    <% for adoption_status in @adoption_status %>
+    <option value="<% adoption_status %>"
+      <%= "selected" if adoption_status == @animal.adoption_status %>
+      ><%= adoption_status %></option>
+      <% end %>
+
+  </select>
+
+
+
+
+
 
   <input type="submit" value="Edit Animal">
 

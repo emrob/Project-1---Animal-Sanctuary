@@ -29,7 +29,9 @@ end
 
 get '/animals/:id/edit' do
   @animal = Animal.find(params['id'].to_i)
+  @adoption_status = ["ADOPTED", "Ready for a new home", "Being trained"]
   erb(:"animals/edit")
+  
 end
 
 post '/animals/:id' do
