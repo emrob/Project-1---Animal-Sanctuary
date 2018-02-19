@@ -6,3 +6,5 @@
 <p>Age: <%= @animal.age()%></p>
 <p>Days in Care: <%=@animal.days_in_care()%></p>
 <p>Adoption Status: <%=@animal.adoption_status()%></p>
+
+<p><a href="/animals/<%= @animal.id %>/edit">Edit</a></p>

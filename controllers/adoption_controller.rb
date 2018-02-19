@@ -5,17 +5,15 @@ require_relative( '../models/adoption')
 require_relative( '../models/owners')
 require_relative( '../models/animals')
 
-
 get '/adoption' do
   @adopt = Adoption.all()
   erb(:"adoptions/index")
 end
 
-
 post '/adoption' do
-  @adopt = Adoption.new()
+  @adopt = Adoption.new(params)
   @adopt.save()
-  erb(:"adoptions/create")
+  redirect to('/adoption')
 end
 
 get '/adoption/new' do

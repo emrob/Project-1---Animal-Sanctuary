@@ -25,3 +25,9 @@ get '/animals/:id' do
   @animal = Animal.find(params['id'].to_i)
   erb(:"animals/show")
 end
+
+
+get '/animals/:id/edit' do
+  @animal = Animal.find(params['id'].to_i)
+  erb(:"animals/edit")
+end

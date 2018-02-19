@@ -66,6 +66,12 @@ owner2 = Owner.new({
   })
 owner2.save()
 
+owner3 = Owner.new({
+  "name" => "Will",
+  "age" => 30
+  })
+owner3.save()  
+
 adoption1 = Adoption.new({
   "animal_id" => animal1.id,
   "owner_id" => owner1.id
