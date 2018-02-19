@@ -15,7 +15,7 @@
   Select an animal:
   <select name="animal_id">
     <% for animal in @animals %>
-    <option value="<% animal.id %>"><%= animal.name %>
+    <option value="<%= animal.id %>"><%= animal.name %>
     </option>
     <% end %>
   </select>

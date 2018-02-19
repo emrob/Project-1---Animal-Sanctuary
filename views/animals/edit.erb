@@ -7,7 +7,7 @@
   <input type="text" name="type" id="type" value="<%= @animal.type %>"/>
 
   <label for="age">Age:</label>
-  <input type="number" name="Age" id="age" value="<%= @animal.age %>"/>
+  <input type="number" name="age" id="age" value="<%= @animal.age %>"/>
 
   <label for="days_in_care">Number of Days in Care:</label>
   <input type="number" name="days_in_care" id="days_in_care" value="<%= @animal.days_in_care %>"/>
@@ -15,7 +15,7 @@
   <label for="adoption_status">Adoption Status:</label>
   <select name="adoption_status" id="adoption_status">
     <% for adoption_status in @adoption_status %>
-    <option value="<% adoption_status %>"
+    <option value="<%= adoption_status %>"
       <%= "selected" if adoption_status == @animal.adoption_status %>
       ><%= adoption_status %></option>
       <% end %>
