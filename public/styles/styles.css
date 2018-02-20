@@ -15,21 +15,25 @@ h1 {
 
 h2 {
   font-family: 'Kavivanar', cursive;
-  margin: 20px
+  margin: 25px
 }
 
 p {
   color: #424874;
   justify-content: center;
   box-sizing: content-box;
-  margin: 20px
+  margin: 30px
 
 }
 
-ul {
+
+
+nav {
   margin: 20px auto;
-  padding: 2px;
-  text-align: left;
   letter-spacing: 4px;
   font weight: 600;
+}
+
+nav li {
+  text-align: center;
 }
