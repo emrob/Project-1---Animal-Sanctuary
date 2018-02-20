@@ -20,6 +20,14 @@ def save()
 
 end
 
+def update()
+  sql = "UPDATE owners SET (name, age) = ($1, $2) WHERE id = $3"
+  values =[@name, @age, @id]
+  SqlRunner.run(sql, values)
+
+end
+
+
 def delete()
   sql = "DELETE FROM owners WHERE id = $1"
   values = [@id]
