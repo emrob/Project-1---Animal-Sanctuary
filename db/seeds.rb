@@ -12,7 +12,8 @@ animal1 = Animal.new({
   "type" => "Dog",
   "age" => 1,
   "arrival_date" => 'Nov 29 2017',
-  "adoption_status" => "Being trained"
+  "adoption_status" => "Being trained",
+  "photo" => "https://vignette.wikia.nocookie.net/thecompletedog/images/3/3e/Black_labrador.jpg/revision/latest/scale-to-width-down/350?cb=20150112230048"
   })
 animal1.save()
 
@@ -21,7 +22,8 @@ animal2 = Animal.new({
   "type" => "Sheep",
   "age" => 3,
   "arrival_date" => 'Feb 01 2018',
-  "adoption_status" => "Ready for adoption"
+  "adoption_status" => "Ready for adoption",
+  "photo" => "http://static5.uk.businessinsider.com/image/5797a92fdd0895057c8b4a6f-480/dolly-the-sheep-media-debut.jpg"
   })
 animal2.save()
 
@@ -30,7 +32,9 @@ animal3 = Animal.new({
   "type" => "Gorilla",
   "age" => 4,
   "arrival_date" => 'Dec 31 2017',
-  "adoption_status" => "Adopted"
+  "adoption_status" => "Adopted",
+  "photo" =>
+  "https://blogs.qub.ac.uk/qubio/files/2016/06/Harambe-300x300.jpg"
   })
 animal3.save()
 
@@ -40,16 +44,18 @@ animal4 = Animal.new({
   "type" => "Dog",
   "age" => 5,
   "arrival_date" => 'Feb 14 2018',
-  "adoption_status" => "ADOPTED"
+  "adoption_status" => "ADOPTED",
+  "photo" => "https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr"
   })
 animal4.save()
 
 animal5 = Animal.new({
   "name" => "Mollie",
-  "type" => "Dog",
+  "type" => "Cat",
   "age" => 9,
   "arrival_date" => 'Jan 11 2018',
-  "adoption_status" => "Adopted"
+  "adoption_status" => "Adopted",
+  "photo" => "https://cdn.theatlantic.com/assets/media/img/mt/2017/08/GettyImages_161785570/lead_960.jpg?1502385684"
   })
 animal5.save()
 
@@ -59,7 +65,9 @@ animal6 = Animal.new({
   "type" => "Horse",
   "age" => 9,
   "arrival_date" => 'Oct 31 2017',
-  "adoption_status" => "Ready for a new home"
+  "adoption_status" => "Ready for a new home",
+  "photo" =>
+  "https://i1.wp.com/theverybesttop10.com/wp-content/uploads/2013/05/Top-10-Images-of-Laughing-Horses-6.jpg?w=588&ssl=1"
   })
 animal6.save()
 
@@ -68,7 +76,8 @@ animal7 = Animal.new({
   "type" => "Lion",
   "age" => 3,
   "arrival_date" => 'July 31 2017',
-  "adoption_status" => "Being trained"
+  "adoption_status" => "Being trained",
+  "photo" => "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Cecil_the_lion_at_Hwange_National_Park_%284516560206%29.jpg/1920px-Cecil_the_lion_at_Hwange_National_Park_%284516560206%29.jpg"
   })
 animal7.save()
 

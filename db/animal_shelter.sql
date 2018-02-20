@@ -8,8 +8,8 @@ CREATE TABLE animals (
   type VARCHAR(255),
   age INT,
   arrival_date DATE NOT NULL,
-  adoption_status VARCHAR(255)
-
+  adoption_status VARCHAR(255),
+  photo VARCHAR(255)
 );
 
 CREATE TABLE owners (
