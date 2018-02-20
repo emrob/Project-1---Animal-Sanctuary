@@ -7,7 +7,7 @@ CREATE TABLE animals (
   name VARCHAR(255),
   type VARCHAR(255),
   age INT,
-  days_in_care INT,
+  arrival_date DATE NOT NULL,
   adoption_status VARCHAR(255)
 
 );

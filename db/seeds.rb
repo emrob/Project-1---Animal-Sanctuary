@@ -7,51 +7,70 @@ require_relative('../models/adoption.rb')
 Animal.delete_all()
 Owner.delete_all()
 
-
 animal1 = Animal.new({
-  "name" => "Herbie",
+  "name" => "Fenton",
   "type" => "Dog",
-  "age" => 5,
-  "arrival_date" => 2018-02-01,
-  "adoption_status" => "ADOPTED"
+  "age" => 1,
+  "arrival_date" => 'Nov 29 2017',
+  "adoption_status" => "Being trained"
   })
 animal1.save()
 
 animal2 = Animal.new({
-  "name" => "Mollie",
-  "type" => "Dog",
-  "age" => 9,
-  "days_in_care" => 14,
-  "adoption_status" => "Ready for a new home"
+  "name" => "Dolly",
+  "type" => "Sheep",
+  "age" => 3,
+  "arrival_date" => 'Feb 01 2018',
+  "adoption_status" => "Ready for adoption"
   })
 animal2.save()
 
 animal3 = Animal.new({
-  "name" => "Matilda",
-  "type" => "Rabbit",
-  "age" => 2,
-  "days_in_care" => 3,
-  "adoption_status" => "Ready for a new home"
+  "name" => "Harambe",
+  "type" => "Gorilla",
+  "age" => 4,
+  "arrival_date" => 'Dec 31 2017',
+  "adoption_status" => "Adopted"
   })
 animal3.save()
 
+
 animal4 = Animal.new({
-  "name" => "Buster",
-  "type" => "Rabbit",
-  "age" => 1,
-  "days_in_care" => 11,
-  "adoption_status" => "Being trained"
+  "name" => "Herbie",
+  "type" => "Dog",
+  "age" => 5,
+  "arrival_date" => 'Feb 14 2018',
+  "adoption_status" => "ADOPTED"
   })
 animal4.save()
 
 animal5 = Animal.new({
-  "name" => "Terri",
-  "type" => "Tarantula",
-  "age" => 1,
-  "days_in_care" => 1,
-  "adoption_status" => "Being trained"
+  "name" => "Mollie",
+  "type" => "Dog",
+  "age" => 9,
+  "arrival_date" => 'Jan 11 2018',
+  "adoption_status" => "Adopted"
   })
 animal5.save()
+
+
+animal6 = Animal.new({
+  "name" => "Mr Ed",
+  "type" => "Horse",
+  "age" => 9,
+  "arrival_date" => 'Oct 31 2017',
+  "adoption_status" => "Ready for a new home"
+  })
+animal6.save()
+
+animal7 = Animal.new({
+  "name" => "Cecile",
+  "type" => "Lion",
+  "age" => 3,
+  "arrival_date" => 'July 31 2017',
+  "adoption_status" => "Being trained"
+  })
+animal7.save()
 
 owner1 = Owner.new({
   "name" => "Rosemary",
@@ -73,18 +92,23 @@ owner3 = Owner.new({
 owner3.save()
 
 adoption1 = Adoption.new({
-  "animal_id" => animal1.id,
+  "animal_id" => animal4.id,
   "owner_id" => owner1.id
 
   })
 adoption1.save()
 
 adoption2 = Adoption.new({
-  "animal_id" => animal2.id,
+  "animal_id" => animal5.id,
   "owner_id" => owner2.id
 
   })
 adoption2.save()
+
+adoption3 = Adoption.new({
+  "animal_id" => animal3.id,
+  "owner_id" => owner3.id
+  })
 
 binding.pry
 nil
