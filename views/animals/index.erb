@@ -1,6 +1,12 @@
 <h2>All Animals</h2>
 
 
+<form method="Get" action="/animals/new" >
+  <input type="submit" value="Add a new animal"/>
+
+</form>
+
+
 <ul>
 <% @animal.each do |animal| %>
 <li>
@@ -13,9 +19,3 @@
 </li>
 <% end %>
 </ul>
-
-
-
-
-
-<p><a href="/animals/new">Add new animal</a></p>
