@@ -1,24 +1,35 @@
 body {
-  background: #E6E6F7 url('/images/dog.jpg');
-  background-size: 75%;
+  background: #E3E9F2 url('/images/dog.jpg');
+  background-size: 75% stretch;
   background-repeat: no-repeat;
+
   padding: 0px;
   margin: 0px;
 }
 
 h1 {
   font-family: 'Kavivanar', cursive;
-
+  font-size: 40px;
   text-align: center;
 }
 
 h2 {
   font-family: 'Kavivanar', cursive;
+  margin: 20px
 }
 
 p {
   color: #424874;
   justify-content: center;
   box-sizing: content-box;
+  margin: 20px
 
+}
+
+ul {
+  margin: 20px auto;
+  padding: 2px;
+  text-align: left;
+  letter-spacing: 4px;
+  font weight: 600;
 }

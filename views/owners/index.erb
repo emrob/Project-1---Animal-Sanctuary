@@ -1,18 +1,17 @@
 <h2>Current Owners:</h2>
 
 
-
+<ul>
 <% @owner.each do |owner| %>
-
+<li>
 <p>Name: <%= owner.name()%></p>
 <p>Age: <%= owner.age()%></p>
 
 
 <p><a href="/owners/<%= owner.id %>">Click here for more details</a></p>
-
-
+</li>
 
 <% end %>
-
+</ul>
 
 <p><a href="/owners/new">Click here to register a new owner</a></p>

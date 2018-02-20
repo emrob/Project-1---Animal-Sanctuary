@@ -1,16 +1,20 @@
 <h2>All Animals</h2>
 
 
-
+<ul>
 <% @animal.each do |animal| %>
-
+<li>
 <p>Name: <%= animal.name()%></p>
 
 
 
 <p><a href="/animals/<%= animal.id %>">Click here for more details</a></p>
-
+</li>
 <% end %>
+</ul>
+
+
+
 
 
 <p><a href="/animals/new">Add new animal</a></p>
