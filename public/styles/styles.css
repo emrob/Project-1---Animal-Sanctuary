@@ -1,10 +1,9 @@
 body {
-  background: #E3E9F2 url('/images/dog.jpg');
-  background-size: 75% stretch;
-  background-repeat: no-repeat;
+  background: #E3E9F2 url('/images/dog.jpg') no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
 
-  padding: 0px;
-  margin: 0px;
 }
 
 h1 {
