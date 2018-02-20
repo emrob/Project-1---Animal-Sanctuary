@@ -29,4 +29,16 @@ post "/owners/:id/delete" do
   @owner = Owner.find(params['id'].to_i)
   @owner.delete()
   erb(:"owners/delete")
+  
+end
+
+get "/owners/:id/edit" do
+  @owner = Owner.find(params['id'].to_i)
+  erb(:"owners/edit")
+end
+
+post "/owners/:id" do
+  owner = Owner.new(params)
+  owner.update()
+  redirect to ("/owners")
 end
