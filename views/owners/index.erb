@@ -2,16 +2,17 @@
 
 
 <ul>
+  <style> li span {position: relative; left: -20px;} </style>
 <% @owner.each do |owner| %>
 <li>
-<p><strong>Name:</strong> <%= owner.name()%></p>
-<p><strong>Age:</strong> <%= owner.age()%></p>
+<p><span><strong>Name:</strong> <%= owner.name()%></span></p>
+<p><span><strong>Age:</strong> <%= owner.age()%></span></p>
 
 
+
+
+<p><span><a href="/owners/<%= owner.id %>">Click here for more details</a></span></p>
 </li>
-
-<p><a href="/owners/<%= owner.id %>">Click here for more details</a></p>
-
 
 <% end %>
 </ul>
