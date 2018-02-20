@@ -4,8 +4,8 @@
 <ul>
 <% @owner.each do |owner| %>
 <li>
-<p>Name: <%= owner.name()%></p>
-<p>Age: <%= owner.age()%></p>
+<p><strong>Name:</strong> <%= owner.name()%></p>
+<p><strong>Age:</strong> <%= owner.age()%></p>
 
 
 <p><a href="/owners/<%= owner.id %>">Click here for more details</a></p>

@@ -37,3 +37,7 @@ nav {
 nav li {
   text-align: center;
 }
+
+form {
+  margin: 25px
+}
