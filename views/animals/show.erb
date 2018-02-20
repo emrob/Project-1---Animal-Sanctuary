@@ -1,11 +1,18 @@
 
 <h2><%= @animal.name()%>'s Details:</h2>
 
+<img height ="200px"  src = "<%=@animal.photo%>" alt ="<%=@animal.name%>">
+
+
+
 <p><strong>Name:</strong> <%= @animal.name()%></p>
 <p><strong>Type:</strong> <%= @animal.type()%></p>
 <p><strong>Age:</strong> <%= @animal.age()%></p>
 <p><strong>Arrival Date:</strong> <%=@animal.arrival_date()%></p>
 <p><strong>Adoption Status:</strong> <%=@animal.adoption_status()%></p>
+
+
+
 
 <p><a href="/animals/<%= @animal.id %>/edit">Edit</a></p>
 
