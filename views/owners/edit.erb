@@ -1,4 +1,4 @@
-<h2>Edit <%=@owner.name %>'s Details::</h2>
+<h2>Edit <%=@owner.name %>'s Details:</h2>
 
 <form action="/owners/<%= @owner.id %>" method="post">
 
@@ -9,6 +9,10 @@ value="<%= @owner.name %>"/>
 <label for="age">Age:</label>
 <input type="number" name="age" id="age"
 value="<%= @owner.age %>"/>
+
+<label for="info">Info</label>
+<input type="text" name="info" id="info"
+value="<%= @owner.info %>"/>
 
 
 <input type="submit" value="Submit"/>

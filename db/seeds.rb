@@ -13,7 +13,7 @@ animal1 = Animal.new({
   "age" => 1,
   "arrival_date" => 'Nov 29 2017',
   "adoption_status" => "Being trained",
-  "photo" => "https://vignette.wikia.nocookie.net/thecompletedog/images/3/3e/Black_labrador.jpg/revision/latest/scale-to-width-down/350?cb=20150112230048"
+  "photo" => "https://pbs.twimg.com/profile_images/1722270702/Black_Labrador_Retriever_400x400.jpg"
   })
 animal1.save()
 
@@ -45,7 +45,7 @@ animal4 = Animal.new({
   "age" => 5,
   "arrival_date" => 'Feb 14 2018',
   "adoption_status" => "ADOPTED",
-  "photo" => "https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr"
+  "photo" => "https://dingo.care2.com/pictures/greenliving/uploads/2017/10/Happy-small-dog.jpg"
   })
 animal4.save()
 
@@ -83,20 +83,22 @@ animal7.save()
 
 owner1 = Owner.new({
   "name" => "Rosemary",
-  "age" => 50
+  "age" => 50,
+  "info" => "Married, 2 grown up children, large house and garden"
   })
 owner1.save()
 
 owner2 = Owner.new({
   "name" => "Mark",
-  "age" => 23
-
-  })
+  "age" => 23,
+  "info" => "Lives with flatmate, part time student"
+    })
 owner2.save()
 
 owner3 = Owner.new({
   "name" => "Will",
-  "age" => 30
+  "age" => 30,
+  "info" => "Works part time, lives alone, has a pet cat"
   })
 owner3.save()
 

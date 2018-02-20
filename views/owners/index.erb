@@ -8,10 +8,17 @@
 <p><strong>Age:</strong> <%= owner.age()%></p>
 
 
-<p><a href="/owners/<%= owner.id %>">Click here for more details</a></p>
 </li>
+
+<p><a href="/owners/<%= owner.id %>">Click here for more details</a></p>
+
 
 <% end %>
 </ul>
 
-<p><a href="/owners/new">Click here to register a new owner</a></p>
+
+
+<form method="Get" action="/owners/new" >
+  <input type="submit" value="Register a new owner"/>
+
+</form>

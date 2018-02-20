@@ -2,27 +2,28 @@ require_relative('../db/sql_runner')
 
 class Owner
 
-  attr_accessor :name, :age, :id
+  attr_accessor :name, :age, :info, :id
 
   def initialize( options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @age = options['age'].to_i
+    @info = options['info']
 
   end
 
 
 def save()
-  sql = "INSERT INTO owners (name, age) VALUES ($1, $2) RETURNING *"
-  values = [@name, @age]
+  sql = "INSERT INTO owners (name, age, info) VALUES ($1, $2, $3) RETURNING *"
+  values = [@name, @age, @info]
   owners = SqlRunner.run(sql, values)
   @id = owners.first()['id'].to_i
 
 end
 
 def update()
-  sql = "UPDATE owners SET (name, age) = ($1, $2) WHERE id = $3"
-  values =[@name, @age, @id]
+  sql = "UPDATE owners SET (name, age, info) = ($1, $2, $3) WHERE id = $4"
+  values =[@name, @age, @info, @id]
   SqlRunner.run(sql, values)
 
 end

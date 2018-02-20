@@ -15,7 +15,8 @@ CREATE TABLE animals (
 CREATE TABLE owners (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
-  age INT
+  age INT,
+  info VARCHAR(255)
 
 );
 
