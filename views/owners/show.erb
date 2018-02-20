@@ -1,8 +1,10 @@
 
-
+<h2>About <%=@owner.name()%>:</h2>
 
 <p>Name: <%= @owner.name()%></p>
 <p>Age: <%= @owner.age()%></p>
+
+
 
 
 <form method="Post" action="/owners/<%= @owner.id %>/delete" >

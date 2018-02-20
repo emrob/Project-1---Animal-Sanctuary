@@ -1,6 +1,6 @@
-main {
-  background: url('/images/dog.jpg');
-  background-size: 100%;
+body {
+  background: #E6E6F7 url('/images/dog.jpg');
+  background-size: 75%;
   background-repeat: no-repeat;
   padding: 0px;
   margin: 0px;
@@ -9,8 +9,13 @@ main {
 h1 {
   font-family: 'Kavivanar', cursive;
 
-  justify-content: center;
+  text-align: center;
 }
+
+h2 {
+  font-family: 'Kavivanar', cursive;
+}
+
 p {
   color: #424874;
   justify-content: center;
