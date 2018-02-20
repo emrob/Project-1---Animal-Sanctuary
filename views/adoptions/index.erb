@@ -2,9 +2,10 @@
 
 
 <ul>
+  <style> li span {position: relative; left: -20px;} </style>
 <% for adoption in @adopt %>
 <li>
-<p><%= adoption.owner.name %> adopted <%= adoption.animal.name%> the <%= adoption.animal.type%>  </p>
+<p><span><%= adoption.owner.name %> adopted <%= adoption.animal.name%> the <%= adoption.animal.type%>  </span></p>
 
 </li>
 <% end %>
