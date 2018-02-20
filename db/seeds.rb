@@ -109,6 +109,7 @@ adoption3 = Adoption.new({
   "animal_id" => animal3.id,
   "owner_id" => owner3.id
   })
+adoption3.save()
 
 binding.pry
 nil
