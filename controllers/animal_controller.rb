@@ -30,7 +30,7 @@ post "/animals/:id/delete" do
   @animal = Animal.find(params['id'].to_i)
   @animal.delete()
   erb(:"animals/delete")
-  
+
 end
 
 get '/animals/:id/edit' do
@@ -43,5 +43,6 @@ end
 post '/animals/:id' do
   animal = Animal.new(params)
   animal.update()
-  redirect to ("/animals")
+  erb(:"animals/updatemsg")
+
 end

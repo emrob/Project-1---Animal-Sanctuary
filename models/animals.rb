@@ -59,13 +59,13 @@ class Animal
     return result
   end
 
-def self.available
-  sql = "SELECT * FROM animals WHERE adoption_status = $1"
-  values = ["Ready for adoption"]
-  available_animals = SqlRunner.run(sql, values)
-  result = available_animals.map { |animal| Animal.new(animal)}
-  return result
-end
+  def self.available
+    sql = "SELECT * FROM animals WHERE adoption_status = $1"
+    values = ["Ready for adoption"]
+    available_animals = SqlRunner.run(sql, values)
+    result = available_animals.map { |animal| Animal.new(animal)}
+    return result
+  end
 
 
 

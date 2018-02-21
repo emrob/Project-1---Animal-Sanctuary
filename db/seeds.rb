@@ -44,7 +44,7 @@ animal4 = Animal.new({
   "type" => "Dog",
   "age" => 5,
   "arrival_date" => 'Feb 14 2018',
-  "adoption_status" => "Ready for adoption",
+  "adoption_status" => "Adopted",
   "photo" => "https://dingo.care2.com/pictures/greenliving/uploads/2017/10/Happy-small-dog.jpg"
   })
 animal4.save()
@@ -61,11 +61,11 @@ animal5.save()
 
 
 animal6 = Animal.new({
-  "name" => "Mr Ed",
+  "name" => "Mister Ed",
   "type" => "Horse",
   "age" => 9,
   "arrival_date" => 'Oct 31 2017',
-  "adoption_status" => "Ready for adoption",
+  "adoption_status" => "Being trained",
   "photo" =>
   "https://i1.wp.com/theverybesttop10.com/wp-content/uploads/2013/05/Top-10-Images-of-Laughing-Horses-6.jpg?w=588&ssl=1"
   })
@@ -76,7 +76,7 @@ animal7 = Animal.new({
   "type" => "Lion",
   "age" => 3,
   "arrival_date" => 'July 31 2017',
-  "adoption_status" => "Being trained",
+  "adoption_status" => "Ready for adoption",
   "photo" => "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Cecil_the_lion_at_Hwange_National_Park_%284516560206%29.jpg/1920px-Cecil_the_lion_at_Hwange_National_Park_%284516560206%29.jpg"
   })
 animal7.save()
@@ -109,12 +109,7 @@ adoption1 = Adoption.new({
   })
 adoption1.save()
 
-adoption2 = Adoption.new({
-  "animal_id" => animal5.id,
-  "owner_id" => owner2.id
 
-  })
-adoption2.save()
 
 adoption3 = Adoption.new({
   "animal_id" => animal3.id,
