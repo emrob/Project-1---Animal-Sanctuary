@@ -59,6 +59,21 @@ class Animal
     return result
   end
 
+def self.available
+  sql = "SELECT * FROM animals WHERE adoption_status = $1"
+  values = ["Ready for adoption"]
+  available_animals = SqlRunner.run(sql, values)
+  result = available_animals.map { |animal| Animal.new(animal)}
+  return result
+end
+
+
+def change_status
+if @adopt_status == "ready for adoption"
+  return adoption_status == "adopted"
+end
+
+end
 
 
   def owner()

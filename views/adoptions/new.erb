@@ -15,8 +15,10 @@
   Select an animal:
   <select name="animal_id">
     <% for animal in @animals %>
+    <% if animal.adoption_status == "Ready for adoption" %>
     <option value="<%= animal.id %>"><%= animal.name %>
     </option>
+    <% end %>
     <% end %>
   </select>
 </label>

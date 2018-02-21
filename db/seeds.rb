@@ -44,7 +44,7 @@ animal4 = Animal.new({
   "type" => "Dog",
   "age" => 5,
   "arrival_date" => 'Feb 14 2018',
-  "adoption_status" => "ADOPTED",
+  "adoption_status" => "Ready for adoption",
   "photo" => "https://dingo.care2.com/pictures/greenliving/uploads/2017/10/Happy-small-dog.jpg"
   })
 animal4.save()
@@ -54,7 +54,7 @@ animal5 = Animal.new({
   "type" => "Cat",
   "age" => 9,
   "arrival_date" => 'Jan 11 2018',
-  "adoption_status" => "Adopted",
+  "adoption_status" => "Ready for adoption",
   "photo" => "https://cdn.theatlantic.com/assets/media/img/mt/2017/08/GettyImages_161785570/lead_960.jpg?1502385684"
   })
 animal5.save()
@@ -65,7 +65,7 @@ animal6 = Animal.new({
   "type" => "Horse",
   "age" => 9,
   "arrival_date" => 'Oct 31 2017',
-  "adoption_status" => "Ready for a new home",
+  "adoption_status" => "Ready for adoption",
   "photo" =>
   "https://i1.wp.com/theverybesttop10.com/wp-content/uploads/2013/05/Top-10-Images-of-Laughing-Horses-6.jpg?w=588&ssl=1"
   })

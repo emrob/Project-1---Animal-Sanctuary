@@ -40,5 +40,11 @@ def owner()
   return Owner.new( results.first )
 end
 
+def self.find(id)
+  sql = "SELECT * FROM adoptions WHERE id = $1"
+  values = [id]
+  adoptions = SqlRunner.run(sql, values)
+  result = Adoption.new(adoptions.first)
+end
 
 end
