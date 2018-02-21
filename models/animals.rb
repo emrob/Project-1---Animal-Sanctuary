@@ -68,13 +68,6 @@ def self.available
 end
 
 
-def change_status
-if @adopt_status == "ready for adoption"
-  return adoption_status == "adopted"
-end
-
-end
-
 
   def owner()
     sql = "SELECT * FROM owners INNER JOIN adoptions ON owners.id = adoptions.owner_id WHERE animal_id = $1"

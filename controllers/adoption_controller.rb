@@ -13,6 +13,9 @@ end
 post '/adoption' do
   @adopt = Adoption.new(params)
   @adopt.save()
+  animal = Animal.find(@adopt.animal_id)
+  animal.adoption_status = "Adopted"
+  animal.update
   redirect to('/adoption')
 end
 
